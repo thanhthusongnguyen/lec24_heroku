@@ -1,0 +1,11 @@
+#!/mnt/c/Users/nguye/OneDrive/Documents/01-School/04-Winter2018/01-SI507/01-Lecture/24-Lecture24_12Apr/lec24/bin/python3
+
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from gunicorn.app.pasterapp import run
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(run())
